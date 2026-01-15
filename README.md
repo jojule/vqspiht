@@ -21,7 +21,7 @@ J. Lehtinen (Turku Centre for Computer Science / University of Turku)
 
 > A. Jarvi, J. Lehtinen, O. Nevalainen. "Variable quality image compression system based on SPIHT"
 
-The paper describes the algorithm, its implementation, and experimental results on both comic images and digital mammograms.
+The paper describes the algorithm, its implementation, and experimental results on both comic images and digital mammograms. A pre-compiled PDF is available at [paper/vqSPIHT.pdf](paper/vqSPIHT.pdf).
 
 ## Building
 

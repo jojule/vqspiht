@@ -4,7 +4,7 @@ using namespace std;
 #include "SetupManager.h"
 #include "Compress.h"
 
-char *architectureCheck()
+const char *architectureCheck()
 {
   int i;
   unsigned short int usi;
@@ -21,7 +21,7 @@ char *architectureCheck()
 
 int main(int argc, char **argv)
 {
-  char *errmsg;
+  const char *errmsg;
   SetupManager *sm = new SetupManager();
 
   // Check hardware architecture is suitable for this implementation

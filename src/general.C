@@ -51,7 +51,7 @@ static Char_Line line;
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-void Error(char * s)
+void Error(const char * s)
 {
   fprintf(stderr, "\n\n\a -> Error: ");
   fputs(s, stderr);
@@ -61,7 +61,7 @@ void Error(char * s)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-void Warning(char * s)
+void Warning(const char * s)
 {
   fprintf(stderr, "\n\n\a -> Warning: ");
   fputs(s, stderr);
@@ -70,7 +70,7 @@ void Warning(char * s)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-void Test_Pointer(void * p, char * orr)
+void Test_Pointer(void * p, const char * orr)
 {
   if (p != NULL) return;
   fputs("\n\n\a -> Error: insufficient memory.", stderr);
@@ -86,7 +86,7 @@ void Test_Pointer(void * p, char * orr)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-char * Input_Line(char * s, char * r)
+char * Input_Line(const char * s, char * r)
 {
   if (s != NULL) printf("\n  %s =? ", s);
   if (!fgets(line,79,stdin)) Error("line could not be read from < stdin >");
@@ -163,7 +163,7 @@ FILE * Open_File(char * s, char * mode)
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-void Chronometer::start(char * s)
+void Chronometer::start(const char * s)
 {
   if (s != NULL) puts(s);
   if (stat)

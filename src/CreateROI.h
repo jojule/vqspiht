@@ -3,7 +3,7 @@
 
 #include "SetupManager.h"
 
-char *CreateROI(SetupManager *sm);
-char *DetectMicrocalcs(SetupManager *sm);
+const char *CreateROI(SetupManager *sm);
+const char *DetectMicrocalcs(SetupManager *sm);
 
 #endif

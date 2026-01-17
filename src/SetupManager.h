@@ -126,10 +126,10 @@ public:
 
   // Parses command-line arguments. returns NULL, if
   // ok, otherwise returns pointter to error message.
-  char *parseCommandLine(int argc, char **argv);
+  const char *parseCommandLine(int argc, char **argv);
 
   // Returns a pointter to array of chars containing command line help
-  char *getCommandLineHelp();
+  const char *getCommandLineHelp();
 
   // Return 1 if user selects to use the program for compression (otherwise
   // 0)
@@ -149,10 +149,10 @@ public:
   // image_height and image_data in raw PGM format, and the out file
   // stream is closed after image is written.
   // On success both functions return NULL. If error has happened
-  // in file operation, a pointter to string explaining the 
+  // in file operation, a pointter to string explaining the
   // error condition is returned.
-  char *loadPGMImage(); // Load input-image (header and data)
-  char *savePGMImage(); // Save input-image (header and data)
+  const char *loadPGMImage(); // Load input-image (header and data)
+  const char *savePGMImage(); // Save input-image (header and data)
 
 
   // Interface for vqSPIHT fileformat handling functions, that 
@@ -165,10 +165,10 @@ public:
   // Finally ....
   // .......
   // On success both functions return NULL. If error has happened
-  // in file operation, a pointter to string explaining the 
+  // in file operation, a pointter to string explaining the
   // error condition is returned.
-  char *loadvqSPIHTImage(); // Load input-image (header and ROI)
-  char *savevqSPIHTImage(); // Save input-image (header and ROI)
+  const char *loadvqSPIHTImage(); // Load input-image (header and ROI)
+  const char *savevqSPIHTImage(); // Save input-image (header and ROI)
   void saveTriggers(); // Save the trigger-values to outputfile header
 
 
@@ -182,7 +182,7 @@ public:
   void flushCoder(); // This has to be called, when outputting, before quitting
 
 private:
-  char *export_ROI();
+  const char *export_ROI();
 
 
   // Files

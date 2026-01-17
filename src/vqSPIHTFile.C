@@ -1,7 +1,7 @@
 #include "SetupManager.h"
 #include "vqSPIHTFile.h"
 
-char *SetupManager::export_ROI()
+const char *SetupManager::export_ROI()
 {
   int i,j,b,x;
   unsigned char *buf;
@@ -31,9 +31,9 @@ char *SetupManager::export_ROI()
   return NULL;
 }
 
-char *SetupManager::loadvqSPIHTImage()
+const char *SetupManager::loadvqSPIHTImage()
 {
-  char *errmsg;
+  const char *errmsg;
   struct vqSPIHTheader h;
 
   fread((void *) &h, sizeof(struct vqSPIHTheader),1,in);
@@ -98,9 +98,9 @@ void SetupManager::saveTriggers()
   out = fopen(out_filename,"ab");
 }
 
-char *SetupManager::savevqSPIHTImage()
+const char *SetupManager::savevqSPIHTImage()
 {
-  char *errmsg;
+  const char *errmsg;
   struct vqSPIHTheader h;
 
   h.magic = MAGIC;

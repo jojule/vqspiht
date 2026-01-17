@@ -12,7 +12,7 @@ using namespace std;
 //  Compress Image defined by sm
 //
 // ========================================================
-char *Compress(SetupManager *sm) { char *errmsg;
+const char *Compress(SetupManager *sm) { const char *errmsg;
 
   // Load PGM input image
   if ((errmsg = sm->loadPGMImage()) != NULL) return errmsg;
@@ -47,9 +47,9 @@ char *Compress(SetupManager *sm) { char *errmsg;
 //  DeCompress Image defined by sm
 //
 // ========================================================
-char *DeCompress(SetupManager *sm)
+const char *DeCompress(SetupManager *sm)
 {
-  char *errmsg;
+  const char *errmsg;
 
   // Load vqSPIHT input image Header and the ROI
   if ((errmsg = sm->loadvqSPIHTImage()) != NULL) return errmsg;
@@ -203,7 +203,7 @@ inline int Sp_n(int x, int ix, int n, SetupManager *sm, unsigned int *SPLM)
 // ========================================================
 int *doWeWantToProcess(int x, SetupManager *sm)
 {
-  
+  return NULL;
 }
 
 // ========================================================
@@ -211,7 +211,7 @@ int *doWeWantToProcess(int x, SetupManager *sm)
 //  Main compression algorithm: The vqSPIHT
 //
 // ========================================================
-char *vqSPIHTsort(SetupManager *sm)
+const char *vqSPIHTsort(SetupManager *sm)
 {
   unsigned int *SPLM;   // Significant Pyramid List Matrix
   unsigned int *PSM;    // Point Significance Matrix

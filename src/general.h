@@ -106,15 +106,15 @@ inline double dBW_inv(double x) { return exp(0.2302585093 * x); }
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 
-void Warning(char *);
+void Warning(const char *);
 
-void Error(char *);
+void Error(const char *);
 
-void Test_Pointer(void * ptr, char * msg = NULL);
+void Test_Pointer(void * ptr, const char * msg = NULL);
 
 void Pause(void);
 
-char * Input_Line(char * msg = NULL, char * res = NULL);
+char * Input_Line(const char * msg = NULL, char * res = NULL);
 
 int Input_Int(char *);
 
@@ -149,7 +149,7 @@ class Chronometer
 
     void reset(void) { elp = stat = 0; }
 
-    void start(char * s = NULL);
+    void start(const char * s = NULL);
 
     void stop(void);
 

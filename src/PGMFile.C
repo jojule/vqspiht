@@ -1,6 +1,6 @@
 #include "SetupManager.h"
 
-char *SetupManager::loadPGMImage()
+const char *SetupManager::loadPGMImage()
 {
   // Check image type (only RAW PGM files supported)
   char str[256];
@@ -49,7 +49,7 @@ char *SetupManager::loadPGMImage()
   return NULL;
 }
 
-char *SetupManager::savePGMImage()
+const char *SetupManager::savePGMImage()
 {
   // Write RAW PGM header
   int i,j; for(j=image_bpp, i=1; j>0 ; j--) i *= 2;

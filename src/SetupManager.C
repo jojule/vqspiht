@@ -34,7 +34,7 @@ SetupManager::SetupManager()
   ucalcdet_enablecleaning            = 0;
 }
 
-char *SetupManager::parseCommandLine(int argc, char **argv)
+const char *SetupManager::parseCommandLine(int argc, char **argv)
 {
   if (argc < 3) return "Too few parameters";
   if (*(argv[1]+1)) return "First parameter is invalid";
@@ -168,7 +168,7 @@ char *SetupManager::parseCommandLine(int argc, char **argv)
   return NULL;
 }
 
-char *SetupManager::getCommandLineHelp()
+const char *SetupManager::getCommandLineHelp()
 {
   return 
     "Usage: \n"

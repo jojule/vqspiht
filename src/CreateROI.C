@@ -4,10 +4,10 @@
 #include <ctime>
 using namespace std;
 
-char *CreateROI(SetupManager *sm)
+const char *CreateROI(SetupManager *sm)
 {
   int i,j;
-  char *errmsg;
+  const char *errmsg;
 
   // Allocate space for the ROI map
   unsigned char *p = sm->ROI = 
@@ -55,7 +55,7 @@ char *CreateROI(SetupManager *sm)
   return NULL;
 }
 
-char *DetectMicrocalcs(SetupManager *sm)
+const char *DetectMicrocalcs(SetupManager *sm)
 {
   // f1s = radius of first gaussian filter used to get rid of the background
   int f1s = sm->ucalcdet_backgroundfilterradius;

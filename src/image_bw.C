@@ -37,13 +37,13 @@
 
 // - - Constants - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-static char * M_MSG = "< Image_SP >";
+static const char * M_MSG = "< Image_SP >";
 
-static char * R_MSG = "< Image_BW > cannot read from file";
+static const char * R_MSG = "< Image_BW > cannot read from file";
 
-static char * W_MSG = "< Image_BW > cannot write to file";
+static const char * W_MSG = "< Image_BW > cannot write to file";
 
-static char * L_MSG = "< Image_BW > larger than specified dimension";
+static const char * L_MSG = "< Image_BW > larger than specified dimension";
 
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

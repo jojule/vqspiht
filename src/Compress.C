@@ -95,7 +95,7 @@ inline int influence(int x, SetupManager *sm)
 
     // Initialize LookUpTable of ROI
     int x,y,size;
-    size = 1 + (height * width) >> 3;
+    size = 1 + ((height * width) >> 3);
     RLUT = (unsigned char *) malloc(sizeof(char) * size);
     unsigned char *p = RLUT;
     for(x=0; x<size; x++) *p++ = 0;

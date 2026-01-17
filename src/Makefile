@@ -12,7 +12,7 @@ OBJECTS = SetupManager.o Compress.o PGMFile.o vqSPIHTFile.o Transform.o \
 default: vqSPIHT 
 
 clean:
-	rm $(OBJECTS) vqSPIHT sqerr
+	rm -f $(OBJECTS) vqSPIHT sqerr
 
 # The main program
 vqSPIHT: vqSPIHT.C $(OBJECTS)
@@ -55,6 +55,6 @@ image_bw.o: image_bw.h image_bw.C general.h
 general.o: general.h general.C
 	g++ -c $(GCCPARAMS) general.C
 
-# QM Coder from AT&T modified by Fränti
+# QM Coder from AT&T modified by Frï¿½nti
 qm.o: qm.h qm.c
-	g++ -c $(GCCPARAMS)  qm.c 
+	gcc -c $(GCCPARAMS)  qm.c

@@ -1,6 +1,10 @@
 #if ! defined(__QM_H)
 #define __QM_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /*--------------------------- Counters -------------------------------*/
 
 extern long   BytesInQM;      /* Number of bytes read  at decoding stage */
@@ -24,5 +28,9 @@ void   DoneQM(void);
 
 int    GetStateIndex(float whiteprob);
 void   RestoreStateIndex(int state, int value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __QM_H */

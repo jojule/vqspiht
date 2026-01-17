@@ -154,7 +154,7 @@ const char *SetupManager::parseCommandLine(int argc, char **argv)
 	i = -1; 
       }
     out_filename = (char *) malloc(strlen(in_filename)+15);
-    if (direction == COMPRESS) sprintf(out_filename,"%s.vqSPIHT",str);
+    if (direction == COMPRESS) snprintf(out_filename,strlen(in_filename)+15,"%s.vqSPIHT",str);
     free(str);
   }
 
